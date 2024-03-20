@@ -47,10 +47,10 @@ q - выход
 
 vet_clinic={}
 choice = ""
-while choice != "q" and choice != "й":
+while choice in ("q", "Q", "й", "Й"):
     choice = input("(h - справка >>>) ")
-    if choice == "a" or choice == "ф": add_clinic()
-    elif choice == "w" or choice == "ц": print_clinic()
-    elif choice == "s" or choice == "ы": search_clinic()
-    elif choice == "d" or choice == "в": del_clinic()
-    elif choice == "h" or choice == "р": print(help)
+    if choice in ("a", "ф", "A", "Ф"): add_clinic()
+    elif choice in ("w", "W", "ц", "Ц"): print_clinic()
+    elif choice in ("s", "S", "ы", "Ы"): search_clinic()
+    elif choice in ("d", "D", "в", "В"): del_clinic()
+    elif choice in ("h", "H", "р", "Р"): print(help)
